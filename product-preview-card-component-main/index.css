@@ -49,6 +49,10 @@
     border-radius: 8px 0 0 8px;
 }
 
+.mobile-kuva{
+    display: none;
+}
+
 .header, .cont{
     font-family: Montserrat;
     font-size: 14px;
@@ -74,11 +78,9 @@
     content: '$169.99';
     color: black;
     font-size: 12px;
-    position: absolute;
-    top: 60%;
-    left: 63%;
     text-decoration: line-through;
     opacity: 50%;
+    margin-left: 2em;
 }
 
 .button{
@@ -91,4 +93,62 @@
     border-radius: 6px;
     padding: 1em;
     width: 80%;
+}
+
+@media (max-width: 375px){
+
+    .mobile-kuva{
+        display: block;
+        max-width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .content{
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    .col1{
+        width: 100%;
+    }
+
+    .col2{
+        padding: 0;
+        width: 100%;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .header{
+        margin-top: 15px;
+    }
+
+    .col2 >*{
+        padding: 0 15px 0 15px;
+    }
+
+    .kuva{
+        display: none;
+    }
+
+    .hinta{
+        padding-top: 0.75em;
+    }
+
+    .button{
+        width: 90%;
+        margin-bottom: 1em;
+        padding: 1em;
+        margin-top: 10px;
+        margin-left: 1.25em;
+    }
+
+    .paksu{
+        padding-top: 10px;
+    }
+
+    .cont{
+        padding-top: 10px;
+    }
+
 }
